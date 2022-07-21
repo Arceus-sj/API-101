@@ -40,6 +40,6 @@ const getSearchedSuperHero = (name) => {
 
 searchBtn.addEventListener('click', () => {
     let name = document.querySelector('#search-name').value;
-    
+    console.log(name);
     getSearchedSuperHero(name);
 })
