@@ -1,6 +1,8 @@
 const randomHeroBtn = document.querySelector('.random-hero-btn');
 const heroImg = document.querySelector('img');
 
+
+
 const baseURL = `https://superheroapi.com/api.php/160583143163979`; 
 
 const getRandomHeroId = () => {
@@ -14,7 +16,12 @@ randomHeroBtn.addEventListener('click', () => {
     .then(response => response.json())
     .then(json => {
         console.log(json.biography['full-name']);
-        heroImg.setAttribute('src', `${json.image.url}`);
+        if(json.image.url){
+            heroImg.setAttribute('src', `${json.image.url}`);
+        }else{
+            alert("Error While Loading img")
+        }
+       
     });
 
     console.log(getRandomHeroId());
@@ -31,9 +38,19 @@ const getSearchedSuperHero = (name) => {
     fetch(`${baseURL}/search/${name}`)
     .then(response => response.json())
     .then(json => {
-        const hero = json.results[0];
-        console.log(hero.name);
-        heroImg.setAttribute('src', `${hero.image.url}`);
+console.log(json.results)
+
+        if(json.results ){
+            const hero = json.results[0];
+            console.log(hero.name);
+
+            heroImg.setAttribute('src', `${hero.image.url}`);
+        }
+        else{
+            alert("No data")
+        }
+        
+     
     });
 };
 
