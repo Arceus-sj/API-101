@@ -57,6 +57,6 @@ console.log(json.results)
 
 searchBtn.addEventListener('click', () => {
     let name = document.querySelector('#search-name').value;
-    
+    console.log(name);
     getSearchedSuperHero(name);
 })
