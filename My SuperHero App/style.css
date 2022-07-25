@@ -6,7 +6,7 @@
 body {
     width: 100%;
     height: 100vh;
-    background-color: #170055;
+    background-color: #112B3C;
     display: flex;
     
 }
@@ -24,37 +24,70 @@ body {
     padding: 5px 10px;
     width: auto;
     height: 30px;
-    font-size: 1rem;
-    color: #28FFBF;
-    background-color: transparent;
-    border: 1px solid #28FFBF;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #FF8C32;
+    background-color: #DDDDDD;
+    /* border: 1px solid #28FFBF; */
     border-radius: 5px;
-    position:sticky ;
+    text-shadow: 1px 1px 2px #112B3C;
+    /* position:sticky ; */
 }
 
 #search-name::placeholder {
-    font-size: 1rem;
-    color: #28FFBF;
+    font-size: 1.5rem;
+    color: #FF8C32;
 }
 
 img {
     margin: 20px;
     max-width: 200px;
     width: 100%;
+    height: 300px;
+}
+
+
+.search-btn  {
+    padding: 6px 5px;
+    width: auto;
     height: auto;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #FF8C32;
+    background-color: transparent;
+    border: 2px solid #DDDDDD;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    transition-property: color, background-color, border;
+    transition-duration: 0.5s, 0.5s, 0.5s;
+    cursor: pointer;
+    /* position: fixed; */
 }
 
-
-button{
-    padding: 10px 20px;
-    color: #28FFBF;
-    border: none;
-    background-color: #170055;
-    margin: 24px ;
-    font-weight: 600;
+.search-btn:hover{
+    color: #112B3C;
+    background-color: #FF8C32;
+    border: 2px solid #FF8C32;
 }
 
-button:hover{
-    border: 2px solid #28FFBF;
+.random-hero-btn {
+    padding: 6px 5px;
+    width: auto;
+    height: auto;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #FF8C32;
+    background-color: transparent;
+    border: 2px solid #DDDDDD;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    transition-property: color, background-color, border;
+    transition-duration: 0.5s, 0.5s, 0.5s;
+    cursor: pointer;
 }
 
+.random-hero-btn:hover{
+    color: #112B3C;
+    background-color: #FF8C32;
+    border: 2px solid #FF8C32;
+}
