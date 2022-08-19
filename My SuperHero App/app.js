@@ -3,7 +3,7 @@ const heroImg = document.querySelector('img');
 
 
 
-const baseURL = `https://superheroapi.com/api.php/160583143163979`; 
+const baseURL = `https://superheroapi.com/api.php/160583143163979/`; 
 
 const getRandomHeroId = () => {
     let randomHeroId = Math.floor(Math.random() * 731)+1;
@@ -12,7 +12,7 @@ const getRandomHeroId = () => {
 
 
 randomHeroBtn.addEventListener('click', () => {
-    fetch(`${baseURL}/${getRandomHeroId()}`)
+    fetch(`${baseURL}${getRandomHeroId()}`)
     .then(response => response.json())
     .then(json => {
         console.log(json.biography['full-name']);
