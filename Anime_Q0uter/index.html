@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <title>Anime_Quoter</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,300&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        video {
+            object-fit: cover;
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        .container {
+            position: relative;
+            color: aliceblue;
+            height: 100vh;
+            /* text-align: center; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            border-radius: 9px;
+            /* border: 1px solid wheat; */
+        }
+        .qoute-area {
+            padding: 10px;
+            width: 600px;
+            height: auto;
+            text-align: center;
+            background-color: rgba(0,0,0,.5);
+            color: #fff;
+            position: absolute;
+            /* border: 1px solid white; */
+        }
+        .qoute-area .anime-qoute {
+            padding: 10px;
+            margin: 10px auto;
+            font-family: 'Kalam', cursive;
+            font-size: 1.5rem;
+            /* border: 1px solid white; */
+        }
+
+        .container-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* border: 1px solid white; */
+        }
+
+        .qoute-area .anime-name {
+            padding: 10px;
+            /* margin: 5px auto; */
+            color: #FEB139;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 500;
+            text-align: end;
+            word-spacing: 3px;
+            letter-spacing: 1px;
+            /* border: 1px solid white; */
+            display: inline-block;
+        }
+        .qoute-area .anime-character {
+            padding: 10px;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 500;
+            word-spacing: 1px;
+            letter-spacing: 1px;
+        }
+        #refresh{
+            padding: 10px;
+            /* margin: 5px auto; */
+            /* margin-top: 10px; */
+            /* border: 1px solid white; */
+            /* position: relative; */
+            display: inline-block;
+        }
+
+        .container-footer button {
+            border: none;
+            background-color: transparent;
+            color: #fff;
+            cursor: pointer;
+        }
+        
+        .container-footer button:hover {
+            animation: rotation 1s 1 linear;
+        }
+
+        @keyframes rotation {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        @media (min-aspect-ratio: 16/9) {
+            video {
+                width: 100%;
+                height: auto;
+            }
+        }
+        @media (max-aspect-ratio: 16/9) {
+            video {
+                width: auto;
+                height: 100vh;
+            }
+        }
+
+        @media screen and (max-width: 640px) {
+            video {
+                display: none;
+            }
+
+            body {
+                width: 100%;
+                height: 100vh;
+                background-origin: border-box;
+                background-image: url('./Image/backImg1.jpg');
+                background-position: center;
+                background-repeat:repeat-y;
+                /* border: 5px solid white; */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .container {
+                width: 100%;
+                position: relative;
+                color: aliceblue;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-sizing: border-box;
+                /* border: 1px solid red; */
+            }
+            .qoute-area {
+                padding: 10px;
+                width: 80%;
+                height: auto;
+                height: auto;
+                text-align: center;
+                background-color: rgba(0,0,0,.5);
+                color: #fff;
+                position: absolute;
+                /* border: 1px solid white; */
+            }
+            
+        }
+
+    </style>
+</head>
+<body>
+    <video playsinline autoplay muted loop class="back-video">
+        <source src="./video/backVideo.mp4" type="video/mp4"> 
+    </video>
+    <div class="container">
+        <div class="search"></div>
+        <div class="qoute-area">
+            <p class="anime-qoute"><q>Destiny. Fate. Dreams. These unstoppable ideas are held deep in the heart of man. As long as there are people who seek freedom in this life, these things shall not vanish from the Earth.</q></p>
+            <div class="container-footer">
+                <button><span class="material-symbols-outlined" id="refresh">refresh</span></button>
+                <p> <span class="anime-character"> — Gold D. Rodger</span> <span class="anime-name">(One Piece)</span></p>
+            </div>
+              
+        </div>
+    </div>
+</body>
+<script src="./script.js" defer></script>
+</html>
