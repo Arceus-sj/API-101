@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <title>AnimeQuoter APP</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
@@ -26,13 +27,11 @@
             position: relative;
             color: aliceblue;
             height: 100vh;
-            /* text-align: center; */
             display: flex;
             align-items: center;
             justify-content: center;
             box-sizing: border-box;
             border-radius: 9px;
-            /* border: 1px solid wheat; */
         }
         .qoute-area {
             padding: 10px;
@@ -42,26 +41,22 @@
             background-color: rgba(0,0,0,.5);
             color: #fff;
             position: absolute;
-            /* border: 1px solid white; */
         }
         .qoute-area .anime-qoute {
             padding: 10px;
             margin: 10px auto;
             font-family: 'Kalam', cursive;
             font-size: 1.5rem;
-            /* border: 1px solid white; */
         }
 
         .container-footer {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            /* border: 1px solid white; */
         }
 
         .qoute-area .anime-name {
             padding: 10px;
-            /* margin: 5px auto; */
             color: #FEB139;
             font-family: 'Ubuntu', sans-serif;
             font-size: 1.1rem;
@@ -69,7 +64,6 @@
             text-align: end;
             word-spacing: 3px;
             letter-spacing: 1px;
-            /* border: 1px solid white; */
             display: inline-block;
         }
         .qoute-area .anime-character {
@@ -80,12 +74,9 @@
             word-spacing: 1px;
             letter-spacing: 1px;
         }
+
         #refresh{
             padding: 10px;
-            /* margin: 5px auto; */
-            /* margin-top: 10px; */
-            /* border: 1px solid white; */
-            /* position: relative; */
             display: inline-block;
         }
 
@@ -98,6 +89,32 @@
         
         .container-footer button:hover {
             animation: rotation 1s 1 linear;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            padding: 10px;
+            text-align: center;
+            /* border: 1px solid white; */
+        }
+        .header input {
+            width: 80%;
+            height: 50px;
+            padding: 10px;
+            margin: 5px;
+            border: none;
+            background-color: rgba(255, 255, 255, .1);
+            border-radius: 50px;
+        }
+
+        .header span {
+            padding: 10px;
+            /* margin: 10px auto; */
+            color: #fff;
+            border: 1px solid white;
         }
 
         @keyframes rotation {
@@ -134,8 +151,8 @@
                 background-image: url('./Image/backImg1.jpg');
                 background-position: center;
                 background-repeat:repeat-y;
-                /* border: 5px solid white; */
                 display: flex;
+                flex-direction: column;
                 justify-content: center;
                 align-items: center;
             }
@@ -148,8 +165,8 @@
                 align-items: center;
                 justify-content: center;
                 box-sizing: border-box;
-                /* border: 1px solid red; */
             }
+
             .qoute-area {
                 padding: 10px;
                 width: 80%;
@@ -159,10 +176,10 @@
                 background-color: rgba(0,0,0,.5);
                 color: #fff;
                 position: absolute;
-                /* border: 1px solid white; */
-            }
-            
+            }   
         }
+
+
 
     </style>
 </head>
@@ -170,10 +187,14 @@
     <video playsinline autoplay muted loop class="back-video">
         <source src="./video/backVideo.mp4" type="video/mp4"> 
     </video>
+    <div class="header">
+        <input type="search" id="search" name="search">
+        <span class="material-symbols-outlined" id="search-icon">
+            search
+        </span>
+    </div>
     <div class="container">
-        <div class="search">
-            <textarea name="search" id="search" cols="30" rows="10"></textarea>
-        </div>
+        
         <div class="qoute-area">
             <p class="anime-qoute"><q>Destiny. Fate. Dreams. These unstoppable ideas are held deep in the heart of man. As long as there are people who seek freedom in this life, these things shall not vanish from the Earth.</q></p>
             <div class="container-footer">
