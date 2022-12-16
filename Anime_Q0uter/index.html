@@ -13,7 +13,9 @@
         *{
             margin: 0;
             padding: 0;
+            overflow: hidden;
         }
+
         video {
             object-fit: cover;
             width: 100vw;
@@ -26,12 +28,13 @@
         .container {
             position: relative;
             color: aliceblue;
-            height: 100vh;
+            height: 80vh;
             display: flex;
             align-items: center;
             justify-content: center;
             box-sizing: border-box;
             border-radius: 9px;
+            /* border: 1px solid white; */
         }
         .qoute-area {
             padding: 10px;
@@ -41,6 +44,8 @@
             background-color: rgba(0,0,0,.5);
             color: #fff;
             position: absolute;
+            /* border: 1px solid white; */
+            box-shadow: 0 0 3px 1px rgba(0,0,0,1);
         }
         .qoute-area .anime-qoute {
             padding: 10px;
@@ -97,24 +102,42 @@
             flex-wrap: nowrap;
             justify-content: center;
             padding: 10px;
-            text-align: center;
+            /* text-align: center; */
             /* border: 1px solid white; */
         }
-        .header input {
-            width: 80%;
-            height: 50px;
-            padding: 10px;
-            margin: 5px;
-            border: none;
-            background-color: rgba(255, 255, 255, .1);
+        .header .search-bar {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 20px;
+            width: auto;
+            /* border: 1px solid #FEB139; */
             border-radius: 50px;
+            background-color: rgba(255, 255, 255, 0.1);
+            /* border: 1px solid #fff; */
+        }
+        .header input {
+            padding: 10px 20px;
+            margin: 5px;
+            /* margin-top: 2px; */
+            border: 0;
+            background: transparent;
+            outline: none;
+            font-size: 20px;
+            color: #fff;
+            /* border: 1px solid #fff; */
         }
 
         .header span {
-            padding: 10px;
-            /* margin: 10px auto; */
+            /* padding: 10p; */
             color: #fff;
-            border: 1px solid white;
+            margin: 5px;
+            /* margin-top: 2px; */
+            margin-right: 20px;
+            cursor: pointer;
+            /* border: 1px solid #fff; */
         }
 
         @keyframes rotation {
@@ -188,18 +211,20 @@
         <source src="./video/backVideo.mp4" type="video/mp4"> 
     </video>
     <div class="header">
-        <input type="search" id="search" name="search">
-        <span class="material-symbols-outlined" id="search-icon">
-            search
-        </span>
+        <div class="search-bar">
+            <input type="search" id="search" name="search" placeholder="Anime Title">
+            <span class="material-symbols-outlined" id="search-btn">
+                search
+            </span>
+        </div>
     </div>
     <div class="container">
         
         <div class="qoute-area">
-            <p class="anime-qoute"><q>Destiny. Fate. Dreams. These unstoppable ideas are held deep in the heart of man. As long as there are people who seek freedom in this life, these things shall not vanish from the Earth.</q></p>
+            <p class="anime-qoute"><q>Anime Quote App</q></p>
             <div class="container-footer">
                 <button><span class="material-symbols-outlined" id="refresh">refresh</span></button>
-                <p> <span class="anime-character"> — Gold D. Rodger</span> <span class="anime-name">(One Piece)</span></p>
+                <p> <span class="anime-character"> — Shantanu </span> <span class="anime-name">(@cypherJana)</span></p>
             </div>
               
         </div>
