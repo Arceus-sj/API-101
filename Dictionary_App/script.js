@@ -20,7 +20,7 @@ search_btn.addEventListener('click', () => {
     fetch(`${url}/${word_searched}`)
     .then((response) => { return response.json()})
     .then((data) => {
-        console.log(data[0]);
+        // console.log(data[0]);
         word.textContent = data[0].word;
         adj.textContent = data[0].phonetics[0].text;
 
