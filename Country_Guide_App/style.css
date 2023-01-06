@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
+    background-color: beige;
+}
+
+.container {
+    width: 400px;
+    border: 1px solid red;
+}
+
+.container .head {
+    width: 80%;
+    margin: 10px auto;
+    border: 1px solid black;
+}
