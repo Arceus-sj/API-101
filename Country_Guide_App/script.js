@@ -1,16 +1,5 @@
 const search_btn = document.querySelector('#search-btn'); 
 
-
-document.addEventListener('keydown', (event) => {
-
-    if(event.code == 'Enter') {
-        get_search_item_info();
-    }
-    else {      
-    }
-})
-
-
 const get_search_item_info = () => {
     let search_item = document.querySelector('#search').value;
     let country_name = document.querySelector('.country-name');
@@ -27,7 +16,7 @@ const get_search_item_info = () => {
     fetch(url)
     .then((response) => {return response.json()})
     .then((data) => {
-        console.log(data[0]);
+        // console.log(data[0]);
         
 
         // let currency_property_name = Object.keys(data[0].currencies)[0];
@@ -65,3 +54,16 @@ const get_search_item_info = () => {
 
 
 
+
+// key-down event -->
+document.addEventListener('keydown', (event) => {
+
+    if(event.code == 'Enter') {
+        get_search_item_info();
+    }
+    else {      
+    }
+})
+
+// btn click event -->
+search_btn.addEventListener('click', get_search_item_info);
