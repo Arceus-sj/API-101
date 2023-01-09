@@ -1,5 +1,19 @@
 const search_btn = document.querySelector('#search-btn'); 
 
+
+function capitalizeTheLetter (item) {
+    let words = item.split(" ");
+
+    for (let i = 0; i < words.length; i++) {
+        words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+    }
+
+    words.join(" ");
+
+    // console.log(words.join(' '))
+    return words.join(' ');
+}
+
 const get_search_item_info = () => {
     let search_item = document.querySelector('#search').value;
     let country_name = document.querySelector('.country-name');
@@ -35,7 +49,7 @@ const get_search_item_info = () => {
         // console.log(Object.values(data[0].languages).toString().split(',').join(', '));
 
 
-        country_name.innerHTML = data[0].altSpellings[2];
+        country_name.innerHTML = capitalizeTheLetter(search_item);
         capital.innerHTML = `Capital: ${data[0].capital[0]}`;
         continent.innerHTML = `Continent: ${data[0].continents[0]}`;
         population.innerHTML = `Population: ${data[0].population}`;
