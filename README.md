@@ -1,6 +1,5 @@
 # API 101
 
-- [Random Dog Image](https://rand0m-d0g.netlify.app/)
 
 - [Joke App](https://joke-app-api-101.netlify.app/)
 ![Screenshot (156)](https://user-images.githubusercontent.com/71997730/211263280-fe2a00c6-8d57-44b1-8b2f-87ca43a65cba.png)
