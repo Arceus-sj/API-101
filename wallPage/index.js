@@ -1,4 +1,4 @@
-const url = `https://picsum.photos/v2/list`;
+const url = ``;
 const container = document.querySelector('.container');
 
 fetch(url)
